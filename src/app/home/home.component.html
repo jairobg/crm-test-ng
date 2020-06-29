@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Home</h1>
+    <a href="/login">Login</a>
+    <hr>
+    <div class="card">
+        <ul class="list-group">
+            <li *ngFor='let client of clients' class="list-group-item">
+                {{ client.fname }} {{ client.lname }}
+            </li>
+        </ul>
+    </div>
+</div>

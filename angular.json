@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crmlex"
+    }
+  },
+  "defaultProject": "crmlex",
+  "cli": {
+    "analytics": "8a26b78c-ef48-482b-90c3-a72c96614b40"
+  }
 }
