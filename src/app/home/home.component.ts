@@ -16,4 +16,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteClient(uid) {
+    const clientIndex = this.clients.map(client => client.uid).indexOf(uid);
+    return this.clients.splice(clientIndex, 1);
+  }
 }

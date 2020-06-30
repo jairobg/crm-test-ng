@@ -2,11 +2,28 @@
     <h1>Home</h1>
     <a href="/login">Login</a>
     <hr>
-    <div class="card">
-        <ul class="list-group">
-            <li *ngFor='let client of clients' class="list-group-item">
-                {{ client.fname }} {{ client.lname }}
-            </li>
-        </ul>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">email</th>
+                <th scope="col">phone</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let client of clients'>
+                <th scope="row">{{ client.uid }}</th>
+                <td>{{client.fname}}</td>
+                <td>{{client.lname}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.phone}}</td>
+                <td>
+                    <button (click)="deleteClient(client.uid)"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

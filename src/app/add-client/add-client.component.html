@@ -1,0 +1,109 @@
+<div class="container">
+  <h1>Add client</h1>
+  <hr />
+  <form [formGroup]="addClientForm" (ngSubmit)="addClient(addClientForm.value)">
+    <div class="form-row">
+      <div class="col-1 required">
+        <label for="clientIdInput">Id</label>
+        <input
+          type="text"
+          formControlName="uid"
+          class="form-control"
+          id="clientIdInput"
+        />
+        <small
+          *ngIf="
+            addClientForm.get('uid').hasError('required') &&
+            addClientForm.get('uid').touched
+          "
+          class="text-danger"
+        >
+          Please fill out this field.
+        </small>
+      </div>
+      <div class="col">
+        <label for="clientFirstNameInput">First name</label>
+        <input
+          type="text"
+          formControlName="fname"
+          class="form-control"
+          id="clientFirstNameInput"
+        />
+        <small
+          *ngIf="
+            addClientForm.get('fname').hasError('required') &&
+            addClientForm.get('fname').touched
+          "
+          class="text-danger"
+        >
+          Please fill out this field.
+        </small>
+      </div>
+      <div class="col">
+        <label for="clientLastNameInput">Last name</label>
+        <input
+          type="text"
+          formControlName="lname"
+          class="form-control"
+          id="clientLastNameInput"
+        />
+        <small
+          *ngIf="
+            addClientForm.get('lname').hasError('required') &&
+            addClientForm.get('lname').touched
+          "
+          class="text-danger"
+        >
+          Please fill out this field.
+        </small>
+      </div>
+    </div>
+
+    <!-- Email field -->
+    <div class="form-group">
+      <label for="clientEmailInput">Email address</label>
+      <input
+        type="email"
+        formControlName="email"
+        class="form-control"
+        id="clientEmailInput"
+        placeholder="name@example.com"
+      />
+      <small
+        *ngIf="
+          addClientForm.get('email').hasError('email') &&
+          addClientForm.get('email').touched
+        "
+        class="text-danger"
+      >
+        Please provide a valid email.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="clientPhoneInput">Phone</label>
+      <input
+        type="tel"
+        formControlName="phone"
+        class="form-control"
+        id="clientPhoneInput"
+        placeholder="555-555-555"
+      />
+    </div>
+    <div class="form-group">
+      <label for="clientAddressInput">Address</label>
+      <input
+        type="text"
+        formControlName="address"
+        class="form-control"
+        id="clientAddressInput"
+      />
+    </div>
+    <button
+      type="submit"
+      [disabled]="addClientForm.invalid"
+      class="btn btn-primary"
+    >
+      Add client
+    </button>
+  </form>
+</div>
