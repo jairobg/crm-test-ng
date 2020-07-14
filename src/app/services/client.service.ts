@@ -53,4 +53,8 @@ export class ClientService {
    getClients(){
      return this.clients;
    }
+
+   addClient(client: Client){
+     this.clients.push(client);
+   }
 }
