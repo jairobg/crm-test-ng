@@ -4,6 +4,7 @@ import { ClientService } from '../../services/client.service';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-add-client',
   templateUrl: './add-client.component.html',
   styleUrls: ['./add-client.component.scss'],
