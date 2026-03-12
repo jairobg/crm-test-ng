@@ -26,8 +26,8 @@
     "zone.js": "~0.15.0"
   },
   "overrides": {
-    "serialize-javascript": ">=6.0.2",
-    "tar": ">=7.5.10"
+    "serialize-javascript": ">=7.0.3"
+    "tar": ">=7.5.11"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.12",
