@@ -1,12 +1,14 @@
 <div class="container">
-    <h1>Login</h1>
-    <hr>
+  <h1>Login</h1>
+  <hr>
     <div class="card">
-        <ul class="list-group">
-            <li *ngFor='let user of users' class="list-group-item">
-                {{ user.fname }} {{ user.lname }}
-            </li>
-        </ul>
+      <ul class="list-group">
+        @for (user of users; track user) {
+          <li class="list-group-item">
+            {{ user.fname }} {{ user.lname }}
+          </li>
+        }
+      </ul>
     </div>
     <button type="button" class="btn btn-secondary" routerLink="/home">Login</button>
-</div>
+  </div>

@@ -3,6 +3,7 @@ import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
 
 @Component({
+  standalone: false,
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']

@@ -11,16 +11,17 @@
           formControlName="uid"
           class="form-control"
           id="clientIdInput"
-        />
-        <small
-          *ngIf="
-            addClientForm.get('uid').hasError('required') &&
-            addClientForm.get('uid').touched
-          "
-          class="text-danger"
-        >
-          Please fill out this field.
-        </small>
+          />
+        @if (
+          addClientForm.get('uid').hasError('required') &&
+          addClientForm.get('uid').touched
+          ) {
+          <small
+            class="text-danger"
+            >
+            Please fill out this field.
+          </small>
+        }
       </div>
       <div class="col">
         <label for="clientFirstNameInput">First name</label>
@@ -29,16 +30,17 @@
           formControlName="fname"
           class="form-control"
           id="clientFirstNameInput"
-        />
-        <small
-          *ngIf="
-            addClientForm.get('fname').hasError('required') &&
-            addClientForm.get('fname').touched
-          "
-          class="text-danger"
-        >
-          Please fill out this field.
-        </small>
+          />
+        @if (
+          addClientForm.get('fname').hasError('required') &&
+          addClientForm.get('fname').touched
+          ) {
+          <small
+            class="text-danger"
+            >
+            Please fill out this field.
+          </small>
+        }
       </div>
       <div class="col">
         <label for="clientLastNameInput">Last name</label>
@@ -47,16 +49,17 @@
           formControlName="lname"
           class="form-control"
           id="clientLastNameInput"
-        />
-        <small
-          *ngIf="
-            addClientForm.get('lname').hasError('required') &&
-            addClientForm.get('lname').touched
-          "
-          class="text-danger"
-        >
-          Please fill out this field.
-        </small>
+          />
+        @if (
+          addClientForm.get('lname').hasError('required') &&
+          addClientForm.get('lname').touched
+          ) {
+          <small
+            class="text-danger"
+            >
+            Please fill out this field.
+          </small>
+        }
       </div>
     </div>
 
@@ -69,16 +72,17 @@
         class="form-control"
         id="clientEmailInput"
         placeholder="name@example.com"
-      />
-      <small
-        *ngIf="
-          addClientForm.get('email').hasError('email') &&
-          addClientForm.get('email').touched
-        "
-        class="text-danger"
-      >
-        Please provide a valid email.
-      </small>
+        />
+      @if (
+        addClientForm.get('email').hasError('email') &&
+        addClientForm.get('email').touched
+        ) {
+        <small
+          class="text-danger"
+          >
+          Please provide a valid email.
+        </small>
+      }
     </div>
     <div class="form-group">
       <label for="clientPhoneInput">Phone</label>
@@ -88,7 +92,7 @@
         class="form-control"
         id="clientPhoneInput"
         placeholder="555-555-555"
-      />
+        />
     </div>
     <div class="form-group">
       <label for="clientAddressInput">Address</label>
@@ -97,13 +101,13 @@
         formControlName="address"
         class="form-control"
         id="clientAddressInput"
-      />
+        />
     </div>
     <button
       type="submit"
       [disabled]="addClientForm.invalid"
       class="btn btn-primary"
-    >
+      >
       Add client
     </button>
   </form>
